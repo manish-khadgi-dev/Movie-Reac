@@ -16,8 +16,9 @@ function App() {
 
 
 const handleOnDelete = (id ) => {
-  if(!window.confirm("Are you sure you want to delete this movie")){
-    setMovies(movies.filter((item) => item.imdbID !== id));
+ 
+  if(window.confirm("Are you sure you want to delete this movie")){
+     setMovies(movies.filter((item) => item.imdbID !== id));
   }
   
 };

@@ -38,7 +38,7 @@ export const MovieList = ({ movies, handleOnDelete }) => {
               key={item.imdb}
               movie={item}
               showDelete={true}
-              func={handleOnDelete}
+              handleOnDelete={handleOnDelete}
             />
           ))}
         </Col>
