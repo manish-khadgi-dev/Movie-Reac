@@ -3,17 +3,20 @@ import { Button, ButtonGroup } from "react-bootstrap";
 
 export const BtnGroup = ({ handleOnFilter }) => {
   return (
-    <ButtonGroup aria-label="Basic example">
-      <Button onClick={() => handleOnFilter("all")} variant="primary">
-        All
-      </Button>
-      <Button onClick={() => handleOnFilter("happy")} variant="danger">
-        {" "}
-        Happy{" "}
-      </Button>
-      <Button onClick={() => handleOnFilter("lazy")} variant="warning">
-        Lazy
-      </Button>
-    </ButtonGroup>
+    
+    <div> 
+      
+      <ButtonGroup aria-label="Basic example" className="py-5 gap-1 ">
+        <Button onClick={() => handleOnFilter("all")} variant="primary" className="button">
+          All Movies
+        </Button>
+        <Button onClick={() => handleOnFilter("happy")} variant="danger">
+          Happy Movies
+        </Button>
+        <Button onClick={() => handleOnFilter("lazy")} variant="warning">
+          Lazy Movies
+        </Button>
+      </ButtonGroup>
+    </div>
   );
 };

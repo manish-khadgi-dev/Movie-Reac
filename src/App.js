@@ -1,5 +1,5 @@
 import "./App.css";
-import { Button, Container } from "react-bootstrap";
+import {  Container } from "react-bootstrap";
 import { Title } from "./components/Title";
 import { SearchForm } from "./components/SearchForm";
 import { MovieList } from "./components/MovieList";
@@ -26,16 +26,18 @@ const handleOnDelete = (id ) => {
   console.log(movies);
 
   return (
-    <div className="wrapper">
+    <div className="wrapper card-wrapper ">
       <Container>
         {/* Title */}
         <Title />
-
+         
         {/* Form */}
         <SearchForm addMovieToList={addMovieToList} />
 
         {/* Movie List */}
         <MovieList movies={movies} handleOnDelete={handleOnDelete}/>
+
+       
       </Container>
     </div>
   );

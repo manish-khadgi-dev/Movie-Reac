@@ -23,16 +23,16 @@ export const MovieList = ({ movies, handleOnDelete }) => {
   };
 
   return (
-    <div className="bg-dark">
-      <Row className="mt-5 bg-dark p-3 rounded">
-        <Col>
-          <BtnGroup handleOnFilter={handleOnFilter} />
-          <div className="py-2"> {display.length} Movies Found </div>
-        </Col>
+    <div className="p-3 rounded card-size">
+      <Row className="mt-5">
+        <Col></Col>
+        <BtnGroup handleOnFilter={handleOnFilter} />
+        <div className="py-2"> {display.length} Movies Found </div>
+        <Col></Col>
       </Row>
-
-      <Row className="">
-        <Col className="mt-5 justify-content-center">
+      <hr />
+      <Row className="mt-5 bg-grey">
+        <Col className="mt-3 d-flex justify-content-around flex-wrap">
           {display.map((item) => (
             <MovieCard
               key={item.imdb}

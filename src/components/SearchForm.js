@@ -63,8 +63,10 @@ export const SearchForm = ({ addMovieToList }) => {
   };
 
   return (
-    <Form onSubmit={handleOnSubmit} className="py-3">
+    <Form onSubmit={handleOnSubmit} className="py-5 ">
       <Row>
+        <Col></Col>
+
         <Col>
           <Form.Control
             value={form}
@@ -78,7 +80,7 @@ export const SearchForm = ({ addMovieToList }) => {
         </Col>
       </Row>
 
-      <Row className="py-3 justify-content-center">
+      <Row className="py-3 d-flex justify-content-center">
         {movie.imdbID && (
           <MovieCard
             movie={movie}
@@ -86,6 +88,7 @@ export const SearchForm = ({ addMovieToList }) => {
             handleOnClear={handleOnClear}
           />
         )}
+
         {error && <Alert variant="danger">{error}</Alert>}
       </Row>
     </Form>
